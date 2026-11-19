@@ -1,0 +1,171 @@
+/* ==========================================================================
+   PIYOZ MARKET - Animations & Micro-Interactions
+   Hardware-accelerated CSS keyframes and transitions
+   ========================================================================== */
+
+/* Fade In & Up */
+@keyframes pzFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.anim-fade-up {
+  animation: pzFadeUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Dropdown Slide Down */
+@keyframes pzSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.anim-slide-down {
+  animation: pzSlideDown 0.25s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* Badge Bump Animation */
+@keyframes pzBadgeBump {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.35);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.badge-bump {
+  animation: pzBadgeBump 0.3s ease-in-out;
+}
+
+/* Heart Beat Animation */
+@keyframes pzHeartBeat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.3);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  75% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.heart-beat {
+  animation: pzHeartBeat 0.4s ease-in-out;
+}
+
+/* Toast Slide In & Out */
+@keyframes pzToastIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pzToastOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+  }
+}
+
+.toast-slide-in {
+  animation: pzToastIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.toast-slide-out {
+  animation: pzToastOut 0.25s ease forwards;
+}
+
+/* Skeleton Loading Shimmer */
+@keyframes pzShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton-box {
+  background: linear-gradient(90deg, #F0F0F3 25%, #E4E4E8 37%, #F0F0F3 63%);
+  background-size: 200% 100%;
+  animation: pzShimmer 1.4s ease infinite;
+  border-radius: 6px;
+}
+
+/* Spinner */
+@keyframes pzSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #FFFFFF;
+  border-radius: 50%;
+  animation: pzSpin 0.7s linear infinite;
+  display: inline-block;
+}
+
+/* Pulsing Flame Effect for Flash Deals */
+@keyframes pzPulseFlame {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+.pulse-flame {
+  animation: pzPulseFlame 1.8s infinite ease-in-out;
+}
+
+/* Accessibility: Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

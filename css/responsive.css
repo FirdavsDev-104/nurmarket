@@ -1,0 +1,371 @@
+/* ==========================================================================
+   PIYOZ MARKET - Responsive Breakpoints & Mobile Optimization
+   Mobile App-like Experience (Uzum Web Style)
+   ========================================================================== */
+
+/* ---------------- MOBILE BOTTOM NAVIGATION BAR ---------------- */
+.mobile-bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-color);
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.06);
+  z-index: 1050;
+  padding: 0 10px;
+}
+
+.mobile-bottom-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.mobile-nav-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  color: var(--text-secondary);
+  font-size: 11px;
+  font-weight: 500;
+  position: relative;
+  min-width: 56px;
+  padding: 4px 0;
+  transition: var(--transition-fast);
+}
+
+.mobile-nav-btn.active, .mobile-nav-btn:hover {
+  color: var(--primary);
+}
+
+.mobile-nav-btn .count-badge {
+  top: -4px;
+  right: 8px;
+}
+
+/* ---------------- BREAKPOINT: 1200px (Desktop Large) ---------------- */
+@media (max-width: 1200px) {
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .hero-slide-visual {
+    width: 340px;
+  }
+
+  .hero-slide-title {
+    font-size: 28px;
+  }
+}
+
+/* ---------------- BREAKPOINT: 992px (Tablets Landscape & Small Laptops) ---------------- */
+@media (max-width: 992px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .catalog-layout-grid {
+    grid-template-columns: 240px 1fr;
+    gap: 20px;
+  }
+
+  .product-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .detail-gallery-wrap {
+    flex-direction: column-reverse;
+  }
+
+  .detail-thumbnails-list {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .detail-main-photo-box {
+    height: 380px;
+  }
+
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-layout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-columns-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .hero-slide-visual {
+    display: none;
+  }
+
+  .hero-slide-content {
+    max-width: 100%;
+  }
+
+  .hero-carousel-container {
+    height: 300px;
+  }
+
+  .hero-carousel-slide {
+    padding: 0 40px;
+  }
+
+  .promo-banners-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------------- BREAKPOINT: 768px (Tablets & Mobile) ---------------- */
+@media (max-width: 768px) {
+  /* Show Mobile Bottom Navigation */
+  .mobile-bottom-nav {
+    display: block;
+  }
+
+  /* Add padding to body so bottom bar doesn't overlay content */
+  body {
+    padding-bottom: 60px;
+  }
+
+  /* Simplify Top Bar */
+  .top-bar-left .top-delivery-badge,
+  .top-bar-right .top-bar-link {
+    display: none;
+  }
+
+  /* Header adjustments */
+  .main-header-inner {
+    height: 64px;
+    gap: 12px;
+  }
+
+  .header-actions {
+    display: none; /* Mobile bottom nav takes over these actions */
+  }
+
+  .brand-name {
+    font-size: 18px;
+  }
+
+  .logo-symbol {
+    width: 34px;
+    height: 34px;
+  }
+
+  .header-catalog-btn span:last-child {
+    display: none; /* Show only icon on small tablet */
+  }
+
+  .header-catalog-btn {
+    padding: 0 12px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .product-card-body {
+    padding: 10px;
+  }
+
+  .product-current-price {
+    font-size: 14px;
+  }
+
+  .product-card-title {
+    font-size: 12px;
+    height: 34px;
+  }
+
+  .catalog-layout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filters-sidebar {
+    display: none; /* Can be toggled with mobile filters button */
+  }
+
+  .filters-sidebar.mobile-open {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1300;
+    overflow-y: auto;
+    border-radius: 0;
+  }
+
+  .cart-drawer {
+    width: 100vw;
+  }
+
+  .modal-card {
+    border-radius: var(--radius-md);
+    max-height: 95vh;
+  }
+
+  .product-detail-wrap {
+    padding: 20px 16px;
+  }
+
+  .hero-slide-title {
+    font-size: 22px;
+  }
+
+  .hero-slide-desc {
+    font-size: 13px;
+  }
+
+  .hero-carousel-container {
+    height: 240px;
+    border-radius: var(--radius-md);
+  }
+
+  .hero-carousel-slide {
+    padding: 0 24px;
+  }
+
+  .hero-arrow-btn {
+    display: none; /* Rely on swipe */
+  }
+
+  .checkout-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-columns-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+
+  .category-tile {
+    padding: 10px 4px;
+  }
+
+  .category-tile-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .category-tile-name {
+    font-size: 11px;
+  }
+}
+
+/* ---------------- BREAKPOINT: 480px (Standard Smartphones) ---------------- */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .main-header-inner {
+    gap: 8px;
+  }
+
+  .header-catalog-btn {
+    display: none; /* Handled via bottom bar or mobile search */
+  }
+
+  .hero-carousel-container {
+    height: 200px;
+  }
+
+  .hero-slide-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .hero-slide-desc {
+    display: none;
+  }
+
+  .hero-slide-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .flash-sales-section {
+    padding: 16px 12px;
+    border-radius: var(--radius-md);
+  }
+
+  .flash-title {
+    font-size: 17px;
+  }
+
+  .countdown-block {
+    min-width: 38px;
+    padding: 4px 6px;
+  }
+
+  .countdown-num {
+    font-size: 14px;
+  }
+
+  .countdown-label {
+    font-size: 8px;
+  }
+
+  .detail-main-photo-box {
+    height: 280px;
+  }
+
+  .detail-current-price {
+    font-size: 22px;
+  }
+
+  .detail-actions-row {
+    flex-direction: column;
+  }
+
+  .detail-btn-cart, .detail-btn-buy-now {
+    width: 100%;
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ---------------- BREAKPOINT: 360px & 320px (Compact Mobile) ---------------- */
+@media (max-width: 360px) {
+  .brand-name {
+    font-size: 16px;
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+}

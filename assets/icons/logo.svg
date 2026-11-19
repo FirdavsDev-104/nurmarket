@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60">
+  <defs>
+    <linearGradient id="pzGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7000FF"/>
+      <stop offset="100%" stop-color="#9E47FF"/>
+    </linearGradient>
+  </defs>
+  <!-- Onion Symbol Box -->
+  <rect x="10" y="8" width="44" height="44" rx="12" fill="url(#pzGrad)" />
+  <!-- Stylized Onion Layers -->
+  <path d="M32 16v5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M32 21c-6 0-11 4.5-11 10.5 0 6.5 5.5 11 11 11s11-4.5 11-11c0-6-5-10.5-11-10.5z" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M32 26c-3 0-5.5 2.5-5.5 5.5 0 3.5 3 6 5.5 6s5.5-2.5 5.5-6c0-3-2.5-5.5-5.5-5.5z" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Brand Typography -->
+  <text x="66" y="36" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-weight="900" font-size="24" fill="#1F2026" letter-spacing="-0.5">PIYOZ<tspan fill="#7000FF">MARKET</tspan></text>
+  <text x="66" y="47" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-weight="700" font-size="9" fill="#767986" letter-spacing="1.5">PREMIUM E-COMMERCE</text>
+</svg>

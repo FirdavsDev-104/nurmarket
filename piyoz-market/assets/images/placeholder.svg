@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <rect width="600" height="600" fill="#F4F5F7"/>
+  <circle cx="300" cy="270" r="100" fill="#EAEAEA"/>
+  <path d="M300 190v12M300 202c-35 0-60 25-60 65 0 45 30 75 60 75s60-30 60-75c0-40-25-65-60-65z" stroke="#7000FF" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M300 230c-18 0-30 15-30 37 0 25 15 42 30 42s30-17 30-42c0-22-12-37-30-37z" stroke="#9E47FF" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <text x="50%" y="430" dominant-baseline="middle" text-anchor="middle" fill="#1F2026" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-weight="800" font-size="28">PIYOZ MARKET</text>
+  <text x="50%" y="465" dominant-baseline="middle" text-anchor="middle" fill="#767986" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-weight="600" font-size="16">Mahsulot surati yuklanmoqda...</text>
+</svg>
